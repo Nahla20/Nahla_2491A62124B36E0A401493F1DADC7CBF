@@ -1,29 +1,12 @@
-# Define the base classplayer
-class player: 
-  def __init__(self):
-   def play(self):
-
-    print("The player is playing cricket.")
-# Define the derived class batsman
-
-class batsman (player): 
-  def play(self): 
-   print("The batsman is batting")
-
-# Define the derivedclass bowler
-class bowler(player):
-
-  def play(self):
-
-   print("The bowler is bowling")
-
-# create objects of batsman and bowler classes
-
-b1=batsman()
-
-b2=bowler()
-
-# call the play() methodfor each object 
-b1.play()
-
-b2.play()
+class students:
+  def __init__(self,name,roll_number,cgpa):
+   self.name = name
+   self.roll_number = roll_number
+   self.cgpa = cgpa
+def sort_students(student_list):
+ sorted_students = sorted(student_list,key=lambda student:student.cgpa,reverse=True)
+ return sorted_students
+students =[students("Hari","3456",7.8),students("Srikanth","3457",8.9),students("Saumya","3458",8.9),students("Mahindhar","3459",9.9)]
+sorted_students = sort_students(students)
+for student in sorted_students:
+ print("Name:{},Roll Number:{},CGPA:{}".format(student.name,student.roll_number,student.cgpa))
